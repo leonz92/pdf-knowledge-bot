@@ -1,0 +1,5 @@
+.env
+my_vector_db/
+__pycache__/
+.streamlit/
+*.pdf
