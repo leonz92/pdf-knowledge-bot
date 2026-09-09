@@ -47,7 +47,7 @@ def ask_gemini_with_memory(collection, question, chat_history, api_key):
   Assistant Answer:
   """
 
-  model = genai.GenerativeModel("gemini-3.1-flash")
+  model = genai.GenerativeModel("gemini-3.5-flash")
   response = model.generate_content(prompt)
   return response.text, pages_found
 
@@ -74,7 +74,7 @@ def ask_gemini_with_raw_text(question, raw_text, chat_history, api_key):
   Assistant Answer:
   """
 
-  model = genai.GenerativeModel("gemini-3.1-flash")
+  model = genai.GenerativeModel("gemini-3.5-flash")
   response = model.generate_content(prompt)
   return response.text
 
@@ -94,6 +94,6 @@ def summarize_entire_pdf(uploaded_file, api_key):
   {full_text}
   """
 
-  model = genai.GenerativeModel("gemini-3.1-flash")
+  model = genai.GenerativeModel("gemini-3.5-flash")
   response = model.generate_content(prompt)
   return response.text
